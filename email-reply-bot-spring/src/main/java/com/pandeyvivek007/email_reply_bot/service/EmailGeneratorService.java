@@ -45,7 +45,6 @@ public class EmailGeneratorService {
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
-        System.out.println(response);
 
         //Return the response
 
