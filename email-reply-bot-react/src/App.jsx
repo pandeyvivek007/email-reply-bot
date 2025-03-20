@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <Container maxWidth='md' sx={{py:4}}>
+    <Container maxWidth='lg' sx={{py:4}}>
       <Typography variant='h3' component="h1" gutterBottom>
         Email Reply Generator
       </Typography>
@@ -44,26 +44,10 @@ function App() {
           label='Original Email Content'
           value={emailContent || ''}
           onChange={(e) => setEmailContent(e.target.value)}
-          sx={{
-            mb: 2,
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: 'white',
-              },
-              '&:hover fieldset': {
-                borderColor: 'white',
-              },
-              '&.Mui-focused fieldset': {
-                borderColor: 'white',
-              },
-              color: 'white',
-            },
-            '& .MuiInputLabel-root': {
-              color: 'white',
-            },
-          }}
+          sx={{ mb: 2,}}
         />
-        <FormControl fullWidth sx={{mb: 2}}>
+        <FormControl fullWidth 
+        sx={{ mb: 2,}}>
           <InputLabel>Tone (Optional)</InputLabel>
           <Select
           value={tone || ''}
@@ -104,7 +88,7 @@ function App() {
           row={6}
           variant='outlined'
           value={generatedReply || ''}
-          />
+          sx={{ mb: 2,}}/>
         <Button
           variant='outlined'
           onClick={() => {
